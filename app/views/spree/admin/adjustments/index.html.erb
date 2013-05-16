@@ -12,6 +12,6 @@
 <%= render :partial => 'adjustments_table' %>
 
 <div class="form-actions">
-  <%= button_link_to t(:continue), @order.cart? ? new_admin_order_payment_url(@order) : admin_orders_url, :icon => ' ', :class => 'btn btn-primary btn-large' %>
+  <%= button_link_to t(:update), @order.cart? ? new_admin_order_payment_url(@order) : admin_orders_url, :icon => ' ', :class => 'btn btn-primary btn-large' %>
 </div>
 

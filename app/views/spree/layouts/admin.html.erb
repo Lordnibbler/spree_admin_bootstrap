@@ -15,7 +15,7 @@
 
         <div class="navbar navbar-static-top navbar-inverse">
           <div class="navbar-inner">
-            <a class="brand" href="#"><%= Spree::Config[:site_name] %></a>
+            <a class="brand" href="/admin"><%= Spree::Config[:site_name] %></a>
             <ul data-hook="admin_tabs" class="nav">
               <%= render :partial => 'spree/admin/shared/tabs' %>
             </ul>
@@ -60,11 +60,6 @@
         <% if content_for?(:page_title) || content_for?(:page_actions) %>
           <div id="content-header" data-hook>
             <div class="page-header">
-              <% if content_for?(:page_actions) %>
-                <div class="page-actions pull-right" data-hook="toolbar">
-                  <%= yield :page_actions %>
-                </div>
-              <% end %>
               <% if content_for?(:page_title) %>
                 <h1 class="<%= yield :page_title_classes %>"><%= yield :page_title %></h1>
               <% end %>
